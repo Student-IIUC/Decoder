@@ -30,12 +30,22 @@ int main()
             drawBoard(spaces);
             if (checkWinner(spaces, player1, player2))
             {
+                cout << "\t\t*****  *       *   *   * ***** *****    *      *   * ***** *   *  ***  \n"
+                     << "\t\t*    * *      * *   * *  *     *    *  **      *   *   *   **  * *     \n"
+                     << "\t\t*****  *     *****   *   ***** *****    *      * * *   *   * * *  ***  \n"
+                     << "\t\t*      *     *   *   *   *     *  *     *      * * *   *   *  **     * \n"
+                     << "\t\t*      ***** *   *   *   ***** *   *   ***      * *  ***** *   *  ***  \n";
                 running = false;
                 break;
             }
 
             else if (checkTie(spaces))
             {
+                cout << "\t\t*****  ***** *  ***        *       ***** ***** ***** \n"
+                     << "\t\t  *      *   * *          * *        *     *   *     \n"
+                     << "\t\t  *      *   *  ***      *****       *     *   ***** \n"
+                     << "\t\t  *      *         *     *   *       *     *   *     \n"
+                     << "\t\t*****    *      ***      *   *       *   ***** ***** \n";
                 running = false;
                 break;
             }
@@ -45,18 +55,28 @@ int main()
             drawBoard(spaces);
             if (checkWinner(spaces, player1, player2))
             {
+                cout << "\t\t*****  *       *   *   * ***** *****   ***     *   * ***** *   *  ***  \n"
+                     << "\t\t*    * *      * *   * *  *     *    * *   *    *   *   *   **  * *     \n"
+                     << "\t\t*****  *     *****   *   ***** *****    *      * * *   *   * * *  ***  \n"
+                     << "\t\t*      *     *   *   *   *     *  *    *       * * *   *   *  **     * \n"
+                     << "\t\t*      ***** *   *   *   ***** *   *  *****     * *  ***** *   *  ***  \n";
                 running = false;
                 break;
             }
 
             else if (checkTie(spaces))
             {
+                cout << "\t\t*****  ***** *  ***        *       ***** ***** ***** \n"
+                     << "\t\t  *      *   * *          * *        *     *   *     \n"
+                     << "\t\t  *      *   *  ***      *****       *     *   ***** \n"
+                     << "\t\t  *      *         *     *   *       *     *   *     \n"
+                     << "\t\t*****    *      ***      *   *       *   ***** ***** \n";
                 running = false;
                 break;
             }
         }
 
-        cout << "Do you want to play again? (yes / no): ";
+        cout << "\nDo you want to play again? (yes / no): ";
         cin >> choice;
     } while (choice != "no");
 }
@@ -64,15 +84,15 @@ int main()
 void drawBoard(char *spaces)
 {
     cout << '\n';
-    cout << "     |     |     " << '\n';
-    cout << "  " << spaces[0] << "  |  " << spaces[1] << "  |  " << spaces[2] << "  " << '\n';
-    cout << "_____|_____|_____" << '\n';
-    cout << "     |     |     " << '\n';
-    cout << "  " << spaces[3] << "  |  " << spaces[4] << "  |  " << spaces[5] << "  " << '\n';
-    cout << "_____|_____|_____" << '\n';
-    cout << "     |     |     " << '\n';
-    cout << "  " << spaces[6] << "  |  " << spaces[7] << "  |  " << spaces[8] << "  " << '\n';
-    cout << "     |     |     " << '\n';
+    cout << "\t\t\t     |     |     " << '\n';
+    cout << "\t\t\t  " << spaces[0] << "  |  " << spaces[1] << "  |  " << spaces[2] << "  " << '\n';
+    cout << "\t\t\t_____|_____|_____" << '\n';
+    cout << "\t\t\t     |     |     " << '\n';
+    cout << "\t\t\t  " << spaces[3] << "  |  " << spaces[4] << "  |  " << spaces[5] << "  " << '\n';
+    cout << "\t\t\t_____|_____|_____" << '\n';
+    cout << "\t\t\t     |     |     " << '\n';
+    cout << "\t\t\t  " << spaces[6] << "  |  " << spaces[7] << "  |  " << spaces[8] << "  " << '\n';
+    cout << "\t\t\t     |     |     " << '\n';
     cout << '\n';
 }
 
@@ -81,8 +101,8 @@ void player1Move(char *spaces, char player1)
     int number;
     do
     {
-        cout << "Player1's move:\n";
-        cout << "Enter a spot to place a marker (1-9): ";
+        cout << "\n\t\tPlayer1's move:\n";
+        cout << "\t\tEnter a spot to place a marker (1-9): ";
         cin >> number;
         number--;
         if (spaces[number] == ' ')
@@ -98,8 +118,8 @@ void player2Move(char *spaces, char player2)
     int number;
     do
     {
-        cout << "Player2's move:\n";
-        cout << "Enter a spot to place a marker (1-9): ";
+        cout << "\n\t\tPlayer2's move:\n";
+        cout << "\t\tEnter a spot to place a marker (1-9): ";
         cin >> number;
         number--;
         if (spaces[number] == ' ')
@@ -113,28 +133,28 @@ void player2Move(char *spaces, char player2)
 bool checkWinner(char *spaces, char player1, char player2)
 {
     if (spaces[0] != ' ' && spaces[0] == spaces[1] && spaces[1] == spaces[2])
-        spaces[0] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[0] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[0] != ' ' && spaces[0] == spaces[3] && spaces[3] == spaces[6])
-        spaces[0] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[0] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[0] != ' ' && spaces[0] == spaces[4] && spaces[4] == spaces[8])
-        spaces[0] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[0] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[1] != ' ' && spaces[1] == spaces[4] && spaces[4] == spaces[7])
-        spaces[1] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[1] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[2] != ' ' && spaces[2] == spaces[4] && spaces[4] == spaces[6])
-        spaces[2] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[2] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[2] != ' ' && spaces[2] == spaces[5] && spaces[5] == spaces[8])
-        spaces[2] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[2] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[3] != ' ' && spaces[3] == spaces[4] && spaces[4] == spaces[5])
-        spaces[3] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[3] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else if (spaces[6] != ' ' && spaces[6] == spaces[7] && spaces[7] == spaces[8])
-        spaces[6] == player1 ? cout << "PLAYER1 WINS!\n" : cout << "PLAYER2 WINS!\n";
+        spaces[6] == player1 ? cout << "\n\t\tPLAYER1 WINS!\n" : cout << "\n\t\tPLAYER2 WINS!\n";
 
     else
         return false;
@@ -150,6 +170,6 @@ bool checkTie(char *spaces)
             return false;
     }
 
-    cout << "IT'S A TIE!\n";
+    cout << "\n\t\tIT'S A TIE!\n";
     return true;
 }
