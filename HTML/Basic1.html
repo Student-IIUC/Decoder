@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Basics of HTML</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="First HTML code" />
+    <meta name="keywords" content="HTML" />
+    <meta name="author" content="Irfan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="30" />
+  </head>
+  <body>
+    <h3>Tables</h3>
+
+    <table bgcolor="black" width="700">
+      <tr bgcolor="grey">
+        <th width="100">Sunday</th>
+        <th width="100">Monday</th>
+        <th width="100">Tuesday</th>
+        <th width="100">Wednesday</th>
+        <th width="100">Thursday</th>
+        <th width="100">Friday</th>
+        <th width="100">Saturday</th>
+      </tr>
+      <tr bgcolor="lightgrey" align="center">
+        <td>7-6</td>
+        <td>7-6</td>
+        <td>7-6</td>
+        <td>7-6</td>
+        <td>Closed</td>
+        <td>Closed</td>
+        <td>7-6</td>
+      </tr>
+    </table>
+    <h3>Span and Div</h3>
+    <!-- span = adds markup to text or portion of a document-->
+    <!-- div = defines a division of a document -->
+    <div style="background-color: blanchedalmond">
+      <p>
+        <span style="color: brown">I am a good student.</span>
+      </p>
+      <p>I want to become a good programmer.</p>
+    </div>
+    <h3>Meta tags</h3>
+    <h3>Iframe</h3>
+    <!-- iframe = embed content from another source into an HTML document
+                ex.used for ads, used in many hacking techniques -->
+    <iframe
+      style="border: 0"
+      src="demo_iframe.html"
+      name="iframe_a"
+      width="750"
+      height="250"
+      title="Iframe Example"
+    ></iframe>
+    <p>
+      <a href="https://www.w3schools.com" target="iframe_a"> w3schools.com </a>
+    </p>
+    <p>
+      When the target attribute of a link matches the name of an iframe, the
+      link will open in the iframe.
+    </p>
+    <h3>Button tags</h3>
+    <a href="https://www.google.com">
+      <button
+        style="
+          background-color: blanchedalmond;
+          border-radius: 5px;
+          width: 100px;
+          height: 50px;
+        "
+      >
+        click me
+      </button>
+    </a>
+    <h3>Forms</h3>
+    <form action="action_page.php" method="post">
+      <div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" placeholder="Tom" required />
+      </div>
+      <br />
+      <div>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" placeholder="Jerry" required />
+      </div>
+      <br />
+      <div>
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="tomandjerry@gmail.com"
+          required
+        />
+      </div>
+      <br />
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" maxlength="12" required />
+      </div>
+      <br />
+      <div>
+        <label for="phone">Phone number:</label>
+        <input type="tel" id="tel" name="tel" placeholder="+880 18234832756" />
+      </div>
+      <br />
+      <div>
+        <label for="bdate">Birthdate:</label>
+        <input type="date" id="bdate" name="bdate" />
+      </div>
+      <br />
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="0"
+          max="99"
+          value="1"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="title">Title:</label>
+
+        <input type="radio" id="Mr." name="title" />
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mrs." name="title" />
+        <label for="Mrs.">Mrs.</label>
+        <input type="radio" id="PhD." name="title" />
+        <label for="PhD.">PhD.</label>
+      </div>
+      <br />
+      <div>
+        <label for="payment">Payment:</label>
+        <select id="payment" name="payment">
+          <option value="bkash">Bkash</option>
+          <option value="nagad">Nagad</option>
+          <option value="upay">Upay</option>
+          <option value="gandpay">Gandpay</option>
+        </select>
+      </div>
+      <div>
+        <input type="reset" />
+      </div>
+      <br />
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+  </body>
+</html>
