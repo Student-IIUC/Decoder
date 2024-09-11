@@ -1,0 +1,36 @@
+/* Universal selector*/
+* {
+    background-color: azure;
+}
+/* Body elements */
+body {
+    font-size: 25px;
+    border: 3px solid black;
+    color: rgb(0, 0, 255);
+}
+/* Headers */
+h1, h2 {
+    color: green;
+}
+/* Paragraph elements */
+p {
+    color: red;
+}
+/* Element inside an element */
+p span {
+    text-transform: uppercase;
+    background-color: goldenrod;
+}
+/* Using class */
+.highlight {
+    background-color: blueviolet;
+    color: #b57f7f;
+}
+/* Class elements */
+.gray {
+    color: gray;
+}
+/* Id elements */
+#second {
+    font-style: italic;
+}
