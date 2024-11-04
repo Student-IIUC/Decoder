@@ -14,7 +14,7 @@ int first_repeating_element(int arr[], int n)
         idx[i] = -1;
     }
 
-    int minidx = INT_FAST32_MAX;
+    int minidx = INT_MAX;
 
     for (int i = 0; i < n; i++)
     {
@@ -27,7 +27,7 @@ int first_repeating_element(int arr[], int n)
             idx[arr[i]] = i;
         }
     }
-    if (minidx == INT_FAST32_MAX)
+    if (minidx == INT_MAX)
     {
         return -1;
     }
